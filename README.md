@@ -17,9 +17,36 @@
 - [Rust 程式設計, 2/e (Programming Rust: Fast, Safe Systems Development, 2/e)](https://www.tenlong.com.tw/products/9786263242326)
 - [The Rust Programming Language](https://doc.rust-lang.org/book/)
 - [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/index.html)
+- [The Cargo Book](https://doc.rust-lang.org/cargo/index.html)
+
+### crates
+
+- [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
+- [clap](https://github.com/clap-rs/clap)
+- [serde-rs](https://github.com/serde-rs/)
+- [tokio.rs](https://tokio.rs/tokio/tutorial)
+- [actix.rs](https://actix.rs/)
+- [redis-rs](https://github.com/redis-rs/redis-rs)
+- [tonic](https://github.com/hyperium/tonic)
+- [gRPC-rs](https://github.com/tikv/grpc-rs)
+
+### 其他資源
+
+- [Rust and WebAssembly](https://rustwasm.github.io/docs/book/introduction.html)
+- [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/intro.html)
 - [The bindgen User Guide](https://rust-lang.github.io/rust-bindgen/introduction.html)
 - [The Rust Reference](https://doc.rust-lang.org/reference/introduction.html)
 - [Rust语言圣经(Rust Course)](https://course.rs/about-book.html)
+- [PyO3 user guide](https://pyo3.rs/)
+- [The \`wasm-bindgen\` Guide](https://rustwasm.github.io/wasm-bindgen/introduction.html)
+- [The Rustonomicon](https://doc.rust-lang.org/beta/nomicon/leaking.html)
+- [CXX — safe interop between Rust and C++](https://cxx.rs/index.html)
+- [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/)
+- [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
+- [Rust语言中文社区](https://rustcc.cn/)
+- [Command Line Applications in Rust](https://rust-cli.github.io/book/index.html)
+- [How to bind (Python + NumPy) with (Rust + Ndarray)](https://itnext.io/how-to-bind-python-numpy-with-rust-ndarray-2efa5717ed21)
 
 ## Summary
 
@@ -98,5 +125,5 @@
 
 ### 四、進階應用
 
-- FFI and cbindgen
+- [FFI and cbindgen](https://rust-lang.github.io/rust-bindgen/introduction.html)
 - [PyO3](https://github.com/PyO3/pyo3)

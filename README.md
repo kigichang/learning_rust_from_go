@@ -1,4 +1,4 @@
-# learning_rust_from_go
+# Learning Rust from Go
 
 ## 前言
 
@@ -70,12 +70,6 @@
   - Vector
   - Struct
   - method (__impl__)
-- Trait
-  - impl trait for struct
-  - __derive__
-  - Debug, Display
-- Advanced Type
-  - enum and match
 - Memory
   - Known Size and Free Once
   - Move / Copy / Clone / Drop
@@ -84,6 +78,13 @@
   - Rc and Weak
   - Cell / RefCell
   - OnceCell / OnceLock
+  - reference lifetime
+- Trait
+  - impl trait for struct
+  - __derive__
+  - Debug, Display
+- Advanced Type
+  - enum and match
 - Error Handling
   - Option
   - Result

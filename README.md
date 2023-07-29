@@ -81,8 +81,11 @@
   - reference lifetime
 - Trait
   - impl trait for struct
+  - Box again
   - __derive__
-  - Debug, Display
+    - Debug and Display
+    - AsRef
+    - Drop
 - Advanced Type
   - enum and match
 - Error Handling
@@ -104,6 +107,7 @@
 ### 二、多執行緒
 
 - Arc and Mutex
+- Send and Sync
 - tokio
   - async
   - thread

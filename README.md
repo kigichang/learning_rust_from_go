@@ -54,7 +54,7 @@
 
 ### 一、Rust 基礎說明
 
-- Introduction
+- [Introduction](introduction.md)
   - 參考文件
   - IDE 設定
   - 與 Go / C / Scala 簡單比較

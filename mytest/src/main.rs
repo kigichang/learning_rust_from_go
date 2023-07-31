@@ -121,27 +121,42 @@ fn main() {
     //
     //}
 
+    //{
+    //    let mut a = 10;
+    //    println!("a = {a}");
+    //    fn test1(mut x: i32) -> i32 {
+    //        x += x;
+    //        x
+    //    }
+//
+    //    let b = test1(a);
+    //    println!("a = {a}");
+    //    println!("b = {b}");
+//
+    //    a *= a;
+//
+    //    fn test2(y: &mut i32) -> i32 {
+    //        *y += *y;
+    //        *y
+    //    }
+    //    println!("a = {a}");
+    //    let c = test2(&mut a);
+    //    println!("a = {a}");
+    //    println!("c = {c}");
+    //}
+
     {
-        let mut a = 10;
-        println!("a = {a}");
-        fn test1(mut x: i32) -> i32 {
-            x += x;
-            x
+        fn add_one(x: i32) -> i32 {
+            x + 1
         }
 
-        let b = test1(a);
-        println!("a = {a}");
-        println!("b = {b}");
-
-        a *= a;
-
-        fn test2(y: &mut i32) -> i32 {
-            *y += *y;
-            *y
+        fn test(x: i32, f: fn(i32) -> i32) -> i32 {
+            f(x)
         }
-        println!("a = {a}");
-        let c = test2(&mut a);
-        println!("a = {a}");
-        println!("c = {c}");
+
+        let a = 10;
+        let b = test(a, add_one);
+
+        println!("a = {a}, b = {b}");
     }
 }

@@ -32,6 +32,7 @@
 
 ### 其他資源
 
+- [Comprehensive Rust by Google](https://google.github.io/comprehensive-rust/)
 - [Rust and WebAssembly](https://rustwasm.github.io/docs/book/introduction.html)
 - [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/intro.html)

@@ -53,6 +53,7 @@
 
 Rust 基本的語言特性：
 
+1. 預設 UTF-8 編碼
 1. 強型別
 1. 沒有 Garbage Collection (GC)；雖然可以自行釋放記憶體，但基本上還是由 Rust 編譯器管理生命週期會比較好。
 1. 沒有 Nil (Null)

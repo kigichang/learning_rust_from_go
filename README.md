@@ -1,5 +1,21 @@
 # Learning Rust from Go
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=3 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [前言](#前言)
+- [開發環境](#開發環境)
+- [主要學習資源](#主要學習資源)
+  - [crates](#crates)
+  - [其他資源](#其他資源)
+- [Rust 基礎說明](#rust-基礎說明)
+- [多執行緒](#多執行緒)
+- [實作應用](#實作應用)
+- [進階應用](#進階應用)
+
+<!-- /code_chunk_output -->
+
 ## 前言
 
 第一次使用 Rust 是在改寫區塊鏈 Side Project。主要是利用 [Hyperledger Sawtooth](https://www.hyperledger.org/use/sawtooth)，原先使用 Go，後來改用 Rust。發現 Rust 的速度有比較快，但不好學。這二、三年來斷斷續續重頭學習，也一直沒有好好整理。最近又再重頭學習一次，並且把公司內原本 CGO 的函式庫，用 Rust 重做一次後，比較有點心得。因此就利用我原本 Go 的筆記章節，一一記錄 Rust 在相關領域上，如何實現。
@@ -49,16 +65,13 @@
 - [Command Line Applications in Rust](https://rust-cli.github.io/book/index.html)
 - [How to bind (Python + NumPy) with (Rust + Ndarray)](https://itnext.io/how-to-bind-python-numpy-with-rust-ndarray-2efa5717ed21)
 
-## Summary
-
-- [本文件](README.md)
-
-### 一、Rust 基礎說明
+## Rust 基礎說明
 
 - [Introduction](introduction.md)
-  - 參考文件
-  - IDE 設定
-  - 與 Go / C / Scala 簡單比較
+  1. 評估是否適合或需要學習 Rust
+  1. 初步了解 Rust 運作方式
+  1. 安裝開發環境
+  1. 實作第一隻程式 - hello world
 - Syntax
   - 巨集 (macro __!__)
 - Basic Type
@@ -105,7 +118,7 @@
   - cfg and target
   - static and dynamic link
 
-### 二、多執行緒
+## 多執行緒
 
 - Arc and Mutex
 - Send and Sync
@@ -116,7 +129,7 @@
     - select!
   - actor
 
-### 三、實作應用
+## 實作應用
 
 - Serde json and toml
 - clap
@@ -129,7 +142,7 @@
   - std::time
   - chrono
 
-### 四、進階應用
+## 進階應用
 
 - [FFI and cbindgen](https://rust-lang.github.io/rust-bindgen/introduction.html)
 - [PyO3](https://github.com/PyO3/pyo3)

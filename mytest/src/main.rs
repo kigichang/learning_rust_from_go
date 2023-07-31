@@ -1,4 +1,5 @@
 fn main() {
+    // trait
     //{
     //    trait MyTrait {
     //        fn hello(&self) -> String;
@@ -83,6 +84,7 @@ fn main() {
     //    test_trait_generic(My2);
     //}
 
+    // lifetime
     //{
     //
     //    struct My1<'a, 'b> {
@@ -121,6 +123,7 @@ fn main() {
     //
     //}
 
+    // ownership and borrow
     //{
     //    let mut a = 10;
     //    println!("a = {a}");
@@ -128,13 +131,13 @@ fn main() {
     //        x += x;
     //        x
     //    }
-//
+    //
     //    let b = test1(a);
     //    println!("a = {a}");
     //    println!("b = {b}");
-//
+    //
     //    a *= a;
-//
+    //
     //    fn test2(y: &mut i32) -> i32 {
     //        *y += *y;
     //        *y
@@ -145,18 +148,34 @@ fn main() {
     //    println!("c = {c}");
     //}
 
-    {
-        fn add_one(x: i32) -> i32 {
-            x + 1
-        }
+    // first class
+    //{
+    //    fn add_one(x: i32) -> i32 {
+    //        x + 1
+    //    }
+    //
+    //    fn test(x: i32, f: fn(i32) -> i32) -> i32 {
+    //        f(x)
+    //    }
+    //
+    //    let a = 10;
+    //    let b = test(a, add_one);
+    //
+    //    println!("a = {a}, b = {b}");
+    //}
 
-        fn test(x: i32, f: fn(i32) -> i32) -> i32 {
-            f(x)
-        }
-
-        let a = 10;
-        let b = test(a, add_one);
-
-        println!("a = {a}, b = {b}");
-    }
+    // Unit
+    //{
+    //    
+    //    fn test1() -> () {
+    //        println!("test1");
+    //    }
+    //
+    //    fn test2() -> () {
+    //        println!("test2")
+    //    }
+    //
+    //    test1();
+    //    test2();
+    //}
 }

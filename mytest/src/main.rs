@@ -1,3 +1,5 @@
+use std::borrow::BorrowMut;
+
 fn main() {
     // trait
     //{
@@ -178,4 +180,150 @@ fn main() {
     //    test1();
     //    test2();
     //}
+
+    {
+        let mut s = String::from("hello");
+        s.push_str(" world");   
+        let ms = &s[0..2];
+        //s = String::from("w");
+        //    |
+        // let ms = &s[0..2];
+        //           - `s` is borrowed here
+        // s = String::from("w");
+        // ^ `s` is assigned to here but it was already borrowed
+        
+        // println!("ms = {}", ms);
+        //                     -- borrow later used here
+
+        
+        println!("ms = {}", ms);
+
+        //package main
+        //
+        //import "fmt"
+        //
+        //func main() {
+        //	s := "hello"
+        //	s1 := s[0:2]
+        //	s = "x"
+        //
+        //	fmt.Println(s1)
+        //	fmt.Println(s)
+        //}
+
+        // result:
+        // he
+        // x
+    }
+
+    //{
+    //    let x = std::cell::RefCell::new(Some(10));
+//
+    //    let y = x.borrow_mut().take();
+//
+    //    println!("{x:?}, {y:?}");
+    //}
+
+    //{
+    //    trait x {
+    //        fn test(&self, a: String, b: &String) -> String;
+    //    }
+//
+    //    struct y;
+    //    
+    //    impl x for y {
+    //        fn test(&self, mut a: String, b: &String) -> String {
+    //            // b.push('b');
+    //            // b.push('b');
+    //            // ^^^^^^^^^^^ `b` is a `&` reference, so the data it refers to cannot be borrowed as mutable
+    //            a.push_str(b);
+    //            return a;
+    //        }
+    //    }
+    //}
+    //{
+    //    fn a1(mut a: String) -> String {
+    //        a.push_str(" a1");
+    //        a
+    //    }
+    //    fn a2(a:&mut String) {
+    //        a.push_str(" a2");
+    //    }
+//
+    //    let x1 = String::from("x1");
+    //    let mut x1 = a1(x1);
+    //    println!("{:?}", x1);
+    //    a2(&mut x1);
+    //    println!("{:?}", x1);
+    //}
+//
+    //{
+    //    trait A {
+    //        fn a(&self) {
+    //            println!("trait default method");
+    //        }
+    //    }
+    //    
+    //    struct B;
+    //    
+    //    impl B {
+    //        fn a(&self) {
+    //            println!("overridden method");
+    //            // call default method here
+    //            A::a(self);
+    //        }
+    //    }
+//
+    //    impl A for B {}
+//
+    //    let a = B;
+    //    a.a();
+    //}
+//
+//
+    //{
+    //    trait A {
+    //        fn a(&self) {
+    //            println!("trait default method");
+    //        }
+    //    }
+    //    
+    //    struct B {
+    //        counter: std::cell::Cell<i32>,
+    //    }
+    //    
+    //    impl A for B {
+    //        fn a(&self) {
+    //            println!("overridden method {}", self.counter.get());
+    //            self.counter.set(self.counter.get() + 1);
+    //            if self.counter.get() > 5 {
+    //                return;
+    //            }
+    //            // recursive call here.
+    //            A::a(self);
+    //        }
+    //    }
+//
+    //    
+//
+    //    let a = B {counter: std::cell::Cell::new(0),};
+    //    a.a();
+    //    
+    //}
+
+    {
+        trait Handler<B> {
+            fn test(x: B);
+        }
+
+        struct A;
+
+        impl Handler<i32> for A {
+            fn test(x: i32) {
+                
+            }
+        }
+    }
+
+
 }

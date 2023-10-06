@@ -184,8 +184,65 @@ mod tests {
 
         aa(t.name);
 
-        let t = t.clone();
+        //let t = t.clone();
 
-        println!("{:?}", t);
+        //println!("{:?}", t);
+    }
+
+    #[test]
+    fn test_to_owned() {
+        let a = "hello";
+        let b = "hello";
+
+        let a1 = a.to_owned();
+        let b1 = b.to_string();
+
+        println!("{}", a == a1);
+        println!("{}", b == b1);
+    }
+
+    #[test]
+    fn test_into_string() {
+        fn aa<T: Into<String>>(src: T) {
+            println!("{}", src.into())
+        }
+
+        let a = "hello".to_string();
+        aa(a);
+        //println!("{}", a);
+        let a = "hello".to_string();
+        aa(&a);
+        println!("{}", a);
+    }
+
+    #[test]
+    fn test_cell() {
+        // Cell: 是針對個 innter T 的型別操作，不能針對個別 element in T 的操作，
+        // 如果要針對個別 element in T 的操作，要用 RefCell.
+
+        use std::cell::{Cell, RefCell};
+
+        // declare mut, 才能修改 inner value。
+        // 但在 struct 如果要操作 inner value，因為不能 declare mut，所以不能用。
+        // struct A {
+        //   a: mut Cell<Vec<i32>>, // 錯誤的 declare.
+        //}
+        // 因此在此情況下，要用 RefCell.
+        // 因為有此現像，才會有實作 Copy 用 Cell, 沒有用 RefCell 的假像。
+        let mut a = Cell::new(vec![1, 2, 3]);
+        a.get_mut().push(4);
+
+        println!("{:?}", a.take());
+        println!("{:?}", a.take());
+
+        let a = Cell::new(vec![1, 2, 3]);
+        let b = Cell::new(vec![4, 5, 6]);
+        a.swap(&b);
+        println!("{:?}", a.take());
+        println!("{:?}", b.take());
+
+        let a = RefCell::new(vec![1, 2, 3]);
+        a.borrow_mut().push(4);
+        println!("{:?}", a);
     }
 }
